@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Equilibre.io ~ Balance your Stellar portolio</title>
+  <meta property="og:title"
+    content="Equilibre.io ~ Balance your Stellar portfolio">
+  <meta property="og:description" name="description"
+    content="Portfolio balancer for the Stellar Decentralized EXchange.">
+
+  <meta property="og:image" content="https://equilibre.io/icons/512x512.png">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:width" content="512">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="msapplication-config" content="browserconfig.xml">
+
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/32x32.png">
+  <link rel="apple-touch" sizes="180x180" href="icons/apple-touch.png">
+  <link rel="mask-icon" href="icons/safari.svg" color="#5bbad5">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">
+      <!--
+        SVG from @fortawesome/font-awesome-free
+        CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/)
+      -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"/></svg>
+      <span>Equilibre.io</span>
+    </h1>
+  </header>
+
+
+  <main>
+    <div id="loading" hidden>
+      <h3><i18n>Loading</i18n></h3>
+    </div>
+
+    <form id="loginForm" autocomplete="on" hidden>
+      <label><i18n>Enter with your Stellar address:</i18n></label>
+      <input id="loginAddressBox" type="text" name="stellar-public-key"
+        placeholder="Public key or federated address">
+      <button type="submit"><i18n>Login</i18n></button>
+      <hr>
+      <button id="ledgerLoginButton">
+        <i18n>Login with Ledger Wallet</i18n>
+      </button>
+      <div class="info"></div>
+    </form>
+  </main>
+
+
+  <noscript>
+    <h2>Please enable JavaScript :)</h2>
+
+    <p>Equilibre.io is a server-less application that runs entirely in your
+    navigator. It is coded in Javascript and requires the browser to allow
+    scripts to be run. FYI, the code is directly loaded from the GitHub
+    repository and the application can be downloaded and launched from your
+    harddisk.</p>
+
+    <p>Respecfully,</p>
+    <p>Mister.Ticot</p>
+  </noscript>
+</body>
+
+<script src="index.js"></script>
+
+</html>
