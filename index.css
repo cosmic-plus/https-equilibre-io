@@ -337,7 +337,7 @@ template {
 form {
   position: relative;
   clear: both;
-  padding: 0.5em;
+  padding: 0.3em 0.5em;
   text-align: center; }
 
 textarea,
@@ -349,7 +349,8 @@ label {
   width: 100%;
   height: 1.8em;
   max-width: 35em;
-  padding: 0.2em;
+  margin: 0.2em 0;
+  padding: 0 0.2em;
   overflow: hidden;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
@@ -365,30 +366,30 @@ input {
 [type="button"],
 [type="submit"],
 button {
-  background: #f1f1f9;
-  margin: 0.3em; }
+  background: #f1f1f9; }
 
 label {
   display: inline-block;
   width: 100%;
   height: 2.4em;
-  padding: 0.3em; }
+  white-space: nowrap; }
 
 label span,
 label div {
   display: inline-block;
-  width: 30%;
+  width: 20%;
+  text-align: left;
   line-height: 1.8em; }
 
 label textarea,
 label select,
 label button,
 label input {
-  width: 66%; }
+  width: 76%; }
 
 label select.half,
 label input.half {
-  width: 33%; }
+  width: 38%; }
 
 textarea[readonly],
 input[readonly] {
@@ -483,8 +484,23 @@ header {
   box-shadow: 0.1em 0.1em 0.2em 0.1em #e6e6e6;
   background: white;
   padding: 0.5em;
-  overflow: hidden;
-  vertical-align: middle; }
+  overflow: hidden; }
+  header a {
+    color: #b3b3b3; }
+    header a:hover {
+      text-decoration: none; }
+    header a:hover, header a.selected {
+      color: burlywood; }
+  header select {
+    float: right;
+    width: 50%;
+    height: 1.5em;
+    margin: 0;
+    border: none !important;
+    box-shadow: none !important;
+    background: white;
+    color: #666666;
+    text-align-last: right; }
 
 h1 {
   display: inline;
@@ -493,11 +509,12 @@ h1 {
   font-style: italic;
   color: #666666; }
   h1 svg {
-    height: 1em;
+    height: 1.1em;
     fill: #666666;
     -webkit-transform: skewX(-12deg);
         -ms-transform: skewX(-12deg);
-            transform: skewX(-12deg); }
+            transform: skewX(-12deg);
+    vertical-align: text-top; }
 
 main, noscript {
   display: block;
@@ -523,20 +540,17 @@ footer {
     margin: 0.25em 0.75em 0 0.75em; }
     footer .Icon svg {
       height: 2.5em;
-      fill: lightgrey;
+      fill: #cccccc;
       -webkit-transition: fill 0.2s ease;
       transition: fill 0.2s ease; }
     footer .Icon:hover svg {
       fill: #666666; }
   footer p {
     line-height: 1.5em;
-    margin: 0;
+    margin: 0 0.75em;
     color: #666666; }
-    footer p a {
-      color: #666666; }
-      footer p a:hover {
-        color: #666666;
-        text-decoration: underline; }
+  footer a {
+    color: #666666; }
 
 /* Content styling */
 p {
@@ -567,23 +581,21 @@ h3 {
 
 hr {
   border: 0;
-  height: 0.07em;
+  height: 1px;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0)); }
 
 /* Links */
 a {
   text-decoration: none;
-  color: #999999;
+  color: gray;
   font-stretch: condensed;
   -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease; }
   a:hover, a.selected {
-    color: burlywood; }
+    text-decoration: underline; }
   a:hover:not(.selected) {
     cursor: pointer; }
-  a.selected {
-    text-decoration: underline; }
 
 /* Containers */
 section p {
@@ -606,29 +618,12 @@ section section {
 .note {
   width: 90%;
   margin: 1em auto;
-  color: grey;
+  color: gray;
   font-style: italic; }
 
 .errors:not(:empty) {
   margin-top: 0.75em;
   text-align: center; }
-
-/* Temporary */
-header .TabsSelector {
-  float: right;
-  width: 50%;
-  background: white; }
-
-main .TabsSelector {
-  max-width: 12em;
-  float: right;
-  margin-bottom: 0.2em;
-  box-shadow: 0.1em 0.1em 0.2em #e6e6e6;
-  border: solid 0.05em #e3e3e8;
-  background: #fbfbfd; }
-
-main .TabsNav {
-  width: 80%; }
 
 /* Table */
 table {
