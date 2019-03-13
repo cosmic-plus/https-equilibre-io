@@ -664,3 +664,34 @@ td .footer {
 .info {
   font-weight: bold;
   color: mediumseagreen; }
+
+/* Loading animation */
+.cosmiclib_loadingAnim,
+.cosmiclib_loader {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.1em;
+  vertical-align: middle;
+  border-radius: 100%;
+  background-color: grey;
+  -webkit-animation: animate 1.0s infinite ease-in-out;
+          animation: animate 1.0s infinite ease-in-out; }
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0; } }
