@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.4.1 - 2019-03-21
+
+## Fixed
+
+- Fixed a typo in welcome page.
+
 ## 0.4.0 - 2019-03-21
 
 ### Changed
