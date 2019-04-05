@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.4.4 - 2019-04-05
+
+### Changed
+
+- Interface loads considerably faster.
+- Interface reflects account/offers change considerably faster.
+
 ## 0.4.3 - 2019-04-04
 
 ### Fixed
