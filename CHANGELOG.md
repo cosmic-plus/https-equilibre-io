@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.5.0 - 2019-04-19
+
+### Added
+
+- Logic for orders that need to take place over multiple anchors, such as
+  position entries and exits.
+- Equilibre.io will now tend to spread the position equally over asset multiple
+  anchors.
+- Apply price picking optimizations when rebalancing assets with quantity
+  targets.
+- Validity span of 5 minutes for transactions.
+- Animate transaction signing frame.
+
+### Fixed
+
+- Fix background image of transaction signing frame.
+
 ## 0.4.5 - 2019-04-12
 
 ### Changed
