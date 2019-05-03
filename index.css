@@ -340,51 +340,25 @@ template {
  */
 @media (print), (prefers-reduced-motion) {
   .animated {
-    -webkit-animation: unset !important;
-            animation: unset !important;
-    -webkit-transition: none !important;
+    animation: unset !important;
     transition: none !important; } }
 
 .animated {
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
-
-@-webkit-keyframes slideInRight {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-    visibility: visible; }
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
+  animation-duration: 0.4s;
+  animation-fill-mode: both; }
 
 @keyframes slideInRight {
   from {
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
     visibility: visible; }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); } }
-
-@-webkit-keyframes slideOutRight {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
-  to {
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-    visibility: hidden; } }
+    transform: translate3d(0, 0, 0); } }
 
 @keyframes slideOutRight {
   from {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+    transform: translate3d(0, 0, 0); }
   to {
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
     visibility: hidden; } }
 
 /* Form styling */
@@ -406,7 +380,6 @@ label {
   margin: 0.2em 0;
   padding: 0 0.2em;
   overflow: hidden;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
 
 textarea,
@@ -565,9 +538,7 @@ h1 {
   h1 svg {
     height: 1.1em;
     fill: #666666;
-    -webkit-transform: skewX(-12deg);
-        -ms-transform: skewX(-12deg);
-            transform: skewX(-12deg);
+    transform: skewX(-12deg);
     vertical-align: text-top; }
 
 main, noscript {
@@ -595,7 +566,6 @@ footer {
     footer .Icon svg {
       height: 2.5em;
       fill: #cccccc;
-      -webkit-transition: fill 0.2s ease;
       transition: fill 0.2s ease; }
     footer .Icon:hover svg {
       fill: #666666; }
@@ -636,7 +606,6 @@ h3 {
 hr {
   border: 0;
   height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0)); }
 
 /* Links */
@@ -644,7 +613,6 @@ a {
   text-decoration: none;
   color: gray;
   font-stretch: condensed;
-  -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease; }
   a:hover, a.selected {
     text-decoration: underline; }
@@ -666,6 +634,9 @@ section section {
   background: #fbfbfd;
   overflow-x: auto; }
 
+.RebalanceGui .error {
+  text-align: center; }
+
 .RebalanceTable .order:hover {
   text-decoration: underline; }
 
@@ -674,10 +645,6 @@ section section {
   margin: 1em auto;
   color: gray;
   font-style: italic; }
-
-.errors:not(:empty) {
-  margin-top: 0.75em;
-  text-align: center; }
 
 /* Table */
 table {
@@ -729,23 +696,11 @@ td .footer {
   vertical-align: middle;
   border-radius: 100%;
   background-color: grey;
-  -webkit-animation: animate 1.0s infinite ease-in-out;
-          animation: animate 1.0s infinite ease-in-out; }
-
-@-webkit-keyframes animate {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0; } }
+  animation: animate 1.0s infinite ease-in-out; }
 
 @keyframes animate {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
+    transform: scale(0); }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0; } }

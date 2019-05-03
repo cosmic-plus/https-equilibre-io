@@ -4,15 +4,15 @@
 - Sources: https://github.com/cosmic-plus/webapp-equilibre-io
 - Build: https://github.com/cosmic-plus/https-equilibre-io
 
-The website is served directly from the GitHub repository, thanks to CloudFlare
-CDN. More precisely, what is served is the HEAD of the master branch of the
-build repository.
+The webapp is served directly from the GitHub repository using CloudFlare. More
+precisely, what is served is the HEAD of the master branch of the build
+repository.
 
-You can run this website locally, or run your own fork of the web quite easily.
+You can run this webapp locally, or serve your own fork on the web.
 
 ## Integrity check
 
-This web application have a unique property: anybody can check that the website
+This web application has a unique property: anybody can check that the website
 served at `https://equilibre.io` is indeed built from the last sources. It
 requires **git**, **npm** and **sh**:
 
@@ -22,14 +22,15 @@ cd webapp-equilibre-io
 npm run check
 ```
 
-The last command will replay the application build and compare the result with
-what is currently served on the web. If any file differ, it will tell about them
-and this means that what is served is not what it is supposed to be. If nothing
-differ, then the integrity check pass and you'll see the following message:
+The last command will replay the building process and compare the result with
+what is currently served on the web. If any file differs, it will tell about
+them and you'll know that what is served is not what it is supposed to be. If
+nothing differs, then the integrity check does pass and you'll see the following
+message:
 
 > nothing to commit, working directory clean
 
-## Run a copy of the website
+## Run a fork of this application
 
 You can run this website locally, or run your own fork on the web quite easily.
 
@@ -44,7 +45,7 @@ other won't (like Chrome).
 
 ### Run it locally 2 (git, npm & live-server)
 
-If you have git and npm, you can serve the website localy:
+If you have git and npm, you can serve the website locally:
 
 ```sh
 git clone https://github.com/cosmic-plus/https-equilibre-io
@@ -69,15 +70,13 @@ domain point to
 GitHub](https://help.github.com/articles/quick-start-setting-up-a-custom-domain/).
 
 Your fork will get its own storage space in users browser: private keys are
-properly compartimented.
+properly compartmented.
 
 ### Tweak it
 
-If you only want to change the way the website display, you can edit the
-`main.css` of the build repository.
-
-If you want to play with the javascript sources, you need to get them
-beforehand:
+If you only want to change the way the website display, you can edit `main.css`
+in the build repository. If you want to play with the JavaScript sources, you
+need to get them beforehand:
 
 ```sh
 git clone https://github.com/cosmic-plus/webapp-equilibre-io
@@ -87,7 +86,7 @@ npm run get
 npm run serve
 ```
 
-The changes made to the files into the `src/` directory will be pushed to the
+The changes made to the files into the `src/` directory will get pushed to the
 local website automatically.
 
 Remember that the source repository contains the build repository as a submodule
@@ -105,7 +104,7 @@ npm run build
 
 ### Check build integrity
 
-After building and commiting the last version of your changes, run:
+After building and committing the last version of your changes, run:
 
 ```sh
 npm run check

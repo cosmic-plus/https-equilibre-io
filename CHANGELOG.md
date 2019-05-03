@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.6.0 - 2019-05-03
+
+### Compatibility
+
+This version comes with significant changes to the rebalancing targets
+configuration. It will automatically convert your previous setup to the new
+format. The first time you'll rebalance your portfolio, you'll have to
+`[Save]` the converted configuration (which will lead to exactly the same
+balance).
+
+### Added
+
+- New balancing mode "weight" that replaces "equal". Weight let you specify
+  relative sizes for your positions. Once "percentage" & "quantity" targets have
+  been allocated, the remaining funds are split between "weight" targets.
+- New balancing mode "ignore".
+
+### Changed
+
+- Balancing mode "percentage" is now strictly applied. Before, it would act as
+  "weight" in case unallocated funds remains − which could lead to a confusing
+  user experience.
+- Raise an error when total "percentage" targets are over hundred. Before, it
+  would lower every target to get back to a valid sum − but this could lead to
+  confusion as well.
+- Remove Stronghold anchors from the trusted list. (Not active anymore)
+- Rebalancing interface displays "Goal" according to rebalancing mode
+  (weight/percentage/quantity/ignore).
+- Rebalancing interface "Divergence" is now displayed relatively to portfolio
+  total value.
+
+### Fixed
+
+- All overallocation/underallocation cases are now properly detected.
+- Detect when an anchor order book is not tradable anymore.
+- Rebalancing targets are now properly sorted after changes.
+- Fix an inconsistency that would cause rebalance targets to be uselessly
+  computed multiple times.
+- Improve loading message spacing.
+
 ## 0.5.0 - 2019-04-19
 
 ### Added
@@ -128,6 +168,5 @@ All notable changes to this project will be documented in this file.
 Beta 1 release
 
 [cosmic-lib]: https://github.com/cosmic-plus/node-cosmic-lib/blob/master/CHANGELOG.md
-
-[@ddombrowsy](https://github.com/ddombrowsky)
-[@pawelfus](https://github.com/pawelfus)
+[@ddombrowsy]: https://github.com/ddombrowsky
+[@pawelfus]: https://github.com/pawelfus
