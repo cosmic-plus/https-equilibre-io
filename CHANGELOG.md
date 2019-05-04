@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.6.1 - 2019-05-04
+
+### Fixed
+
+- Fix a mistake that prevented to select "Ignore" rebalancing mode.
+
 ## 0.6.0 - 2019-05-03
 
 ### Compatibility
