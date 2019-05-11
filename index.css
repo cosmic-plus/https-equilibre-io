@@ -688,7 +688,8 @@ td .footer {
 
 /* Loading animation */
 .cosmiclib_loadingAnim,
-.cosmiclib_loader {
+.cosmiclib_loader,
+.spinner {
   display: inline-block;
   width: 1em;
   height: 1em;
