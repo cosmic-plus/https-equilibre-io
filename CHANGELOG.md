@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.8.0 - 2019-05-17
+
+### Added
+
+- Rebalancing: Assets with multiple anchors whose are imbalanced now gets
+  pro-actively rebalanced. This happens once the asset itself is balanced
+  enough. This is done by little steps to mitigate the risks when only one of
+  the two balancing trade is taken: anchorA to XLM or XLM to AnchorB.
+
+### Changed
+
+- Rebalancing: Native assets other than lumens don't use global market prices
+  anymore, as those prices are not reliable due to market manipulations. This
+  change affects valuation & price picking of: MOBI, REPO, RMT, SLT, TERN.
+- Rebalancing: Anchors risk-balancing rules are now strictly applied when
+  crafting transactions.
+- Improve compliance with the [PWA] standard.
+- Improve loading time.
+
 ## 0.7.0 - 2019-05-11
 
 ### Added
@@ -184,5 +203,6 @@ balance).
 Beta 1 release
 
 [cosmic-lib]: https://github.com/cosmic-plus/node-cosmic-lib/blob/master/CHANGELOG.md
+[pwa]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction
 [@ddombrowsy]: https://github.com/ddombrowsky
 [@pawelfus]: https://github.com/pawelfus
