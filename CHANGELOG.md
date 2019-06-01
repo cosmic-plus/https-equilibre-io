@@ -2,13 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.9.0 - 2019-06-01
+
+### Added
+
+- It is now possible to add new assets to the portfolio.
+- It is now possible to enable/disable anchors on-the-fly for tethered assets
+  that have multiple known anchors. The rebalancing algorithm will gradually
+  move the funds to comply with the new setup in about 5~15 steps.
+- Add the "remove" rebalancing mode to liquidate an asset and remove its
+  trustlines.
+
+### Changed
+
+- Try to make an additional profit when an anchor for a tethered asset is out of
+  balance.
+- Up-to-date targets for demo portfolio.
+
+### Fixed
+
+- Fix a regression introduced in 0.8.0 that prevented rebalancing operations to
+  get generated in some cases.
+- Raise up the number of fetched offers for orderbooks to fix an edge-case where
+  price estimation for native assets other than Lumens would fail.
+- Handle the edge-case of a fully rebalanced portfolio which has obsolete offers
+  to cancel.
+- US Dollar name now displays properly.
+- Truncate default quantity in target size setup.
+- Fix a rare bug that prevented new trustline to show up.
+- Fix a rare bug that prevented target of empty balance to be computed properly.
+
 ## 0.8.1 - 2019-05-24
 
-## Changed
+### Changed
 
 - The portfolio pie chart is now displayed instantly.
 
-## Fixed
+### Fixed
 
 - Portfolio pie chart: Fix cases that caused wrong positioning.
 - Portfolio price chart: Make data for last day display properly (a timestamp
