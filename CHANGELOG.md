@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.9.1 - 2019-06-08
+
+### Changed
+
+- Improve theme: font & background colors, element spacing, form styling, chart
+  font & colors, smaller footer, small screen display...
+
 ## 0.9.0 - 2019-06-01
 
 ### Added

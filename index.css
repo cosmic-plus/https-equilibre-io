@@ -331,180 +331,11 @@ template {
 
 *, *:before, *:after {
   box-sizing: inherit;
-  vertical-align: inherit; }
+  vertical-align: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-/*!
- * Partly taken from animate.css -http://daneden.me/animate
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- * Copyright (c) 2018 Daniel Eden
- */
-@media (print), (prefers-reduced-motion) {
-  .animated {
-    animation: unset !important;
-    transition: none !important; } }
-
-.animated {
-  animation-duration: 0.4s;
-  animation-fill-mode: both; }
-
-@keyframes slideInRight {
-  from {
-    transform: translate3d(100%, 0, 0);
-    visibility: visible; }
-  to {
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes slideOutRight {
-  from {
-    transform: translate3d(0, 0, 0); }
-  to {
-    transform: translate3d(100%, 0, 0);
-    visibility: hidden; } }
-
-/* Form styling */
-form {
-  position: relative;
-  clear: both;
-  padding: 0.3em 0.5em;
-  text-align: center; }
-
-textarea,
-select,
-button,
-input,
-label {
-  display: inline-block;
-  width: 100%;
-  height: 1.8em;
-  max-width: 35em;
-  margin: 0.2em 0;
-  padding: 0 0.2em;
-  overflow: hidden;
-  transition: all 0.2s ease; }
-
-textarea,
-select,
-button,
-input {
-  border: solid 0.05em #d5d5dd;
-  border-radius: 0.1em;
-  background: #f8f8fc; }
-
-[type="button"],
-[type="submit"],
-button {
-  background: #f1f1f9; }
-
-fieldset {
-  border: none;
-  min-height: 2.4em;
-  text-align: right; }
-
-label {
-  display: inline-block;
-  width: 100%;
-  height: 2.4em; }
-  label img {
-    height: 100%;
-    width: auto;
-    float: left;
-    padding: 0.1em; }
-
-form > label span,
-fieldset legend {
-  display: inline-block;
-  width: 20%;
-  text-align: left;
-  white-space: nowrap; }
-
-fieldset legend {
-  float: left;
-  line-height: 2.2em; }
-
-label * {
-  width: 76%; }
-
-label .half,
-fieldset .half {
-  width: 38%; }
-
-label .third,
-fieldset .third {
-  width: 25%; }
-
-textarea[readonly],
-input[readonly] {
-  color: #666666; }
-
-textarea:focus:enabled,
-select:focus:enabled,
-button:focus:enabled,
-input:focus:enabled {
-  outline: 0;
-  box-shadow: 0em 0em 0.2em #8f8fa3; }
-
-textarea:hover:enabled,
-select:hover:enabled,
-button:hover:enabled,
-input:hover:enabled {
-  border: solid 0.05em #ababba; }
-
-[type="button"]:hover:enabled,
-[type="submit"]:hover:enabled,
-button:hover.enabled {
-  cursor: pointer;
-  background: #ededf7; }
-
-textarea[readonly]:hover,
-[type="text"][readonly]:hover,
-select:hover {
-  cursor: pointer; }
-
-[type="number"] {
-  text-align: right; }
-
-[type="checkbox"],
-[type="radio"] {
-  display: none; }
-
-[type="checkbox"] + label,
-[type="radio"] + label {
-  width: 38%;
-  min-width: 9.9em;
-  height: 1.8em;
-  border-radius: 0.1em;
-  padding: 0.2em;
-  line-height: 1.4em;
-  white-space: nowrap;
-  font-style: italic;
-  text-align: center;
-  color: #666666; }
-
-[type="checkbox"] + label::before {
-  content: "✘ "; }
-
-[type="checkbox"]:checked:disabled + label,
-[type="radio"]:checked:disabled + label {
-  box-shadow: inset 0 0 0.2em #8f8fa3;
-  color: black;
-  font-style: normal; }
-
-[type="checkbox"]:checked:enabled + label,
-[type="radio"]:checked:enabled + label {
-  background-color: lightgreen;
-  color: black;
-  font-style: normal; }
-
-[type="checkbox"]:checked + label::before {
-  content: "✔ "; }
-
-[type="checkbox"]:enabled + label:hover,
-[type="radio"]:enabled + label:hover {
-  background-color: mediumseagreen;
-  color: black;
-  cursor: pointer; }
-
-/* Page layout */
+/* Layout */
 html {
   position: relative;
   box-sizing: border-box;
@@ -515,116 +346,30 @@ html {
 body {
   height: 100%;
   background: #f8f8fc;
-  padding: 2.5em 0 4.25em 0;
-  font-family: Arial, sans-serif; }
+  padding: 2.5em 0 3.75em 0;
+  font-family: Arial, sans-serif;
+  color: #111; }
 
 header {
   position: fixed;
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 2.5em;
-  box-shadow: 0.1em 0.1em 0.2em 0.1em #e6e6e6;
-  background: white;
-  padding: 0.5em;
-  overflow: hidden; }
-  header a {
-    color: #b3b3b3; }
-    header a:hover {
-      text-decoration: none; }
-    header a:hover, header a.selected {
-      color: burlywood; }
-  header select {
-    float: right;
-    width: 50%;
-    height: 1.5em;
-    margin: 0;
-    border: none !important;
-    box-shadow: none !important;
-    background: white;
-    color: #666666;
-    text-align-last: right; }
-
-h1 {
-  display: inline;
-  vertical-align: middle;
-  font-size: 1.25em;
-  font-style: italic;
-  color: #666666; }
-  h1 svg {
-    height: 1.1em;
-    fill: #666666;
-    transform: skewX(-12deg);
-    vertical-align: text-top; }
+  height: 2.5em; }
 
 main, noscript {
   display: block;
   width: 50em;
   max-width: 100%;
-  margin: auto;
-  padding: 0.5em;
-  overflow: hidden; }
+  margin: auto; }
 
 footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 4.25em;
-  border-top: solid 1px #e6e6e6;
-  background: white;
-  text-align: center;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden; }
-  footer .Icon {
-    display: inline-block;
-    margin: 0.25em 0.75em 0 0.75em; }
-    footer .Icon svg {
-      height: 2.5em;
-      fill: #cccccc;
-      transition: fill 0.2s ease; }
-    footer .Icon:hover svg {
-      fill: #666666; }
-  footer p {
-    line-height: 1.5em;
-    margin: 0 0.75em;
-    color: #666666; }
-  footer a {
-    color: #666666; }
+  height: 3.75em; }
 
-/* Content styling */
-p {
-  line-height: 1.4em;
-  vertical-align: baseline; }
-
-nav {
-  float: right;
-  display: inline-block;
-  height: 1.45em;
-  line-height: 1.45em;
-  text-align: right; }
-  nav a {
-    display: inline-block;
-    margin: 0 1rem; }
-
-h2 {
-  margin: 1rem;
-  font-size: 1.25em;
-  font-weight: normal;
-  text-align: center; }
-
-h3 {
-  margin: 0.5em;
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center; }
-
-hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0)); }
-
-/* Links */
+/* Generic Tag Styling */
 a {
   text-decoration: none;
   color: gray;
@@ -635,32 +380,36 @@ a {
   a:hover:not(.selected) {
     cursor: pointer; }
 
-/* Containers */
-section p {
-  padding: 0 1em; }
+p {
+  line-height: 1.4em;
+  vertical-align: baseline; }
 
-#loading,
-#loginForm,
-section section {
-  width: 100%;
-  margin: 1rem 0;
-  box-shadow: 0.1em 0.1em 0.2em #e6e6e6;
-  border: solid 1px #e3e3e8;
-  border-radius: 0.1em;
-  background: #fbfbfd;
-  overflow-x: auto; }
+nav {
+  float: right;
+  display: inline-block;
+  line-height: 1.5em;
+  text-align: right; }
+  nav a {
+    display: inline-block;
+    margin: 0 0 0 1.62em; }
 
-.RebalanceGui .error {
+h2 {
+  margin: 1.5rem;
+  font-size: 1.25em;
+  font-weight: normal;
   text-align: center; }
 
-.RebalanceTable .order:hover {
-  text-decoration: underline; }
+h3 {
+  margin: 1em;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center; }
 
-.note {
-  width: 90%;
-  margin: 1em auto;
-  color: gray;
-  font-style: italic; }
+hr {
+  border: 0;
+  height: 1px;
+  margin: 1em;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #e3e3e8, rgba(0, 0, 0, 0)); }
 
 /* Table */
 table {
@@ -693,16 +442,297 @@ tr:hover, tr.selected {
 td .footer {
   font-weight: bold; }
 
-/* Generic classes */
-.error {
-  font-weight: bold;
-  color: tomato; }
+/* Form styling */
+/* Blocks */
+form {
+  margin: 1em 0;
+  padding: 0 1em;
+  text-align: center; }
+
+fieldset,
+form > label {
+  display: inline-block;
+  width: 100%;
+  max-width: 40em;
+  border: none;
+  padding: 0.2em 0;
+  margin: auto;
+  text-align: right; }
+  fieldset > span:first-child,
+  fieldset > legend:first-child,
+  form > label > span:first-child,
+  form > label > legend:first-child {
+    display: inline-block;
+    float: left;
+    line-height: 2.2em;
+    min-width: 20%;
+    text-align: left;
+    white-space: nowrap; }
+
+/* Elements */
+textarea,
+select,
+button,
+input,
+[type="checkbox"] + label,
+[type="radio"] + label {
+  display: inline-block;
+  width: 100%;
+  height: 1.8em;
+  max-width: 35em;
+  margin: 0.2em 0;
+  padding: 0 0.2em;
+  overflow: hidden;
+  transition: all 0.2s ease; }
+
+textarea,
+select,
+button,
+input {
+  border: solid 0.05em #d5d5dd;
+  border-radius: 0.1em;
+  background: #f8f8fc; }
+  textarea [type="number"],
+  select [type="number"],
+  button [type="number"],
+  input [type="number"] {
+    text-align: right; }
+  textarea[readonly],
+  select[readonly],
+  button[readonly],
+  input[readonly] {
+    color: #666666; }
+  textarea:enabled:focus,
+  select:enabled:focus,
+  button:enabled:focus,
+  input:enabled:focus {
+    outline: 0;
+    box-shadow: 0em 0em 0.2em #8f8fa3; }
+  textarea:enabled:hover,
+  select:enabled:hover,
+  button:enabled:hover,
+  input:enabled:hover {
+    border: solid 0.05em #ababba; }
+
+textarea[readonly]:hover,
+input[readonly]:hover,
+select:hover {
+  cursor: pointer; }
+
+[type="button"],
+[type="submit"],
+button {
+  background: #f1f1f9; }
+  [type="button"]:enabled:hover,
+  [type="submit"]:enabled:hover,
+  button:enabled:hover {
+    cursor: pointer;
+    background: #ededf7; }
+
+[type="checkbox"],
+[type="radio"] {
+  display: none; }
+  [type="checkbox"] + label::before,
+  [type="radio"] + label::before {
+    line-height: 1.4em; }
+  [type="checkbox"][type="checkbox"] + label::before,
+  [type="radio"][type="checkbox"] + label::before {
+    content: "✘ "; }
+  [type="checkbox"][type="checkbox"]:checked + label::before,
+  [type="radio"][type="checkbox"]:checked + label::before {
+    content: "✔ "; }
+  [type="checkbox"] + label,
+  [type="radio"] + label {
+    border-radius: 0.1em;
+    padding: 0.2em;
+    line-height: 1.4em;
+    white-space: nowrap;
+    font-style: italic;
+    text-align: center;
+    color: #666666; }
+    [type="checkbox"] + label img,
+    [type="radio"] + label img {
+      height: 100%;
+      width: auto;
+      float: left;
+      padding: 0.1em; }
+  [type="checkbox"]:checked + label,
+  [type="radio"]:checked + label {
+    color: black;
+    font-style: normal; }
+  [type="checkbox"]:disabled:checked + label,
+  [type="radio"]:disabled:checked + label {
+    box-shadow: inset 0 0 0.2em #8f8fa3; }
+  [type="checkbox"]:enabled:checked + label,
+  [type="radio"]:enabled:checked + label {
+    background-color: lightgreen; }
+  [type="checkbox"]:enabled + label:hover,
+  [type="radio"]:enabled + label:hover {
+    background: mediumseagreen;
+    color: black;
+    cursor: pointer; }
+
+/* Sizing */
+form > label > :not(span),
+form > fieldset > :not(legend) {
+  width: 76%; }
+
+form .half,
+form .half label {
+  width: 38%;
+  min-width: 9em; }
+
+form .third,
+form .third label {
+  width: 25%;
+  min-width: 6em; }
+
+/* Header Style */
+body > header {
+  box-shadow: 0.1em 0.1em 0.2em 0.1em #e6e6e6;
+  background: white;
+  padding: 0 2%;
+  vertical-align: top;
+  overflow: hidden;
+  line-height: 2.5em; }
+  body > header nav {
+    line-height: inherit; }
+    body > header nav a {
+      color: #b3b3b3; }
+      body > header nav a:not(.selected):hover {
+        text-decoration: none; }
+      body > header nav a:hover, body > header nav a.selected {
+        color: burlywood; }
+  body > header select {
+    float: right;
+    width: auto;
+    height: 2.5em;
+    margin: 0;
+    border: none !important;
+    box-shadow: none !important;
+    background: white;
+    color: #666666;
+    text-align-last: right; }
+  body > header h1 {
+    display: inline;
+    font-size: 1.25em;
+    font-style: italic;
+    color: #666666; }
+    body > header h1 svg {
+      height: 1.1em;
+      fill: #666666;
+      transform: skewX(-12deg);
+      vertical-align: text-top; }
+
+/* Main Style */
+body > noscript,
+body > main {
+  padding: 0.3em 1%;
+  overflow: hidden; }
+  body > noscript section p,
+  body > main section p {
+    padding: 0 1em; }
+  body > noscript #loading,
+  body > noscript #loginForm,
+  body > noscript section section,
+  body > main #loading,
+  body > main #loginForm,
+  body > main section section {
+    width: 100%;
+    margin: 1rem 0;
+    box-shadow: 0.1em 0.1em 0.2em #e6e6e6;
+    border-radius: 0.1em;
+    background: #fdfdfe;
+    overflow-x: auto;
+    overflow-y: hidden; }
+
+/* Footer Style */
+body > footer {
+  border-top: solid 1px #e6e6e6;
+  background: white;
+  padding: 0 1%;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap; }
+  body > footer .Icon {
+    display: inline-block;
+    margin: 0.25em 1vw 0 1vw; }
+    body > footer .Icon svg {
+      height: 2em;
+      max-width: 9vw;
+      fill: #cccccc;
+      transition: fill 0.2s ease; }
+    body > footer .Icon:hover svg {
+      fill: #666666; }
+  body > footer p {
+    line-height: 1.5em;
+    margin: 0 0.75em;
+    color: #666666; }
+  body > footer a {
+    color: #666666; }
+
+/* Modal Style */
+.Modal {
+  max-height: 95%;
+  width: 40em;
+  max-width: 95%;
+  box-shadow: 0.1em 0.1em 0.2em grey;
+  border-radius: 0.1em;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+/* Components */
+.TargetControls .error {
+  text-align: center; }
+
+/* Asset Selector */
+.AssetSelector legend {
+  font-weight: bold; }
+
+/*!
+ * Partly taken from animate.css -http://daneden.me/animate
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ * Copyright (c) 2018 Daniel Eden
+ */
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    animation: unset !important;
+    transition: none !important; } }
+
+.animated {
+  animation-duration: 0.4s;
+  animation-fill-mode: both; }
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible; }
+  to {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0); }
+  to {
+    transform: translate3d(100%, 0, 0);
+    visibility: hidden; } }
 
 .info {
   font-weight: bold;
   color: mediumseagreen; }
 
-/* Loading animation */
+.error {
+  font-weight: bold;
+  color: tomato; }
+
+.note {
+  width: 90%;
+  margin: 1em auto;
+  color: gray;
+  font-style: italic; }
+
+/* Spinner */
 .cosmiclib_loadingAnim,
 .cosmiclib_loader,
 .spinner {
