@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.10.0 - 2019-06-15
+
+### Added
+
+- Add the portfolio history chart.
+
+### Removed
+
+- Removed pricing in fiat currencies that were not fully supported: BGN, HRK,
+  ISK & RON.
+
+### Changed
+
+- Dramatically improve historical prices caching & performance.
+- Use Highstock for all charts (saves 224Kb).
+- Automatically reload the application once an update gets installed.
+
+### Fixed
+
+- Properly fetch the orderbook for assets with code "XLM" which are not native
+  lumens.
+- Fix a case in which the price graph printed a value one day in the future.
+
 ## 0.9.1 - 2019-06-08
 
 ### Changed
