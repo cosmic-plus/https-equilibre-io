@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.10.1 - 2019-06-17
+
+### Fixed
+
+- Fix an error in fiat historical price refreshing that prevented portfolio
+  history to get computed in some cases.
+
 ## 0.10.0 - 2019-06-15
 
 ### Added
