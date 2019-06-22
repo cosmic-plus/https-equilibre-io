@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.10.2 - 2019-06-22
+
+### Changed
+
+- Update [cosmic-lib] to 1.5.1. (Security fix)
+
 ## 0.10.1 - 2019-06-17
 
 ### Fixed
