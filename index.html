@@ -46,17 +46,40 @@
       <h3><i18n>Loading</i18n></h3>
     </div>
 
-    <form id="loginForm" autocomplete="on" hidden>
-      <p><i18n>Enter with your Stellar address:</i18n></p>
-      <input id="loginAddressBox" type="text" name="stellar-public-key"
-        placeholder="Public key or federated address">
-      <button type="submit"><i18n>Login</i18n></button>
-      <hr>
-      <button id="loginWithLedger" type="button">
-        <i18n>Login with Ledger Wallet</i18n>
-      </button>
-    </form>
+    <section id="loginTab" hidden>
+      <section>
+
+        <form id="loginForm" autocomplete="on">
+          <h3><i18n>Enter with your Stellar address:</i18n></h3>
+          <input id="loginAddressBox" type="text" name="stellar-public-key"
+            placeholder="Public key or federated address">
+          <button type="submit"><i18n>Login</i18n></button>
+          <hr>
+          <button id="loginWithLedger" type="button">
+            <i18n>Login with Ledger Wallet</i18n>
+          </button>
+
+        </form>
+
+      </section>
+
+      <section>
+        <form>
+        <p><i18n>Feeling Curious ?</i18n><p>
+        <p><a id="demoLink"><i18n>Check My Demo Account</i18n></a></p>
+        <p><a
+           href="https://medium.com/cosmic-plus/equilibre-io-in-depth-analysis-after-one-year-of-rebalancing-bdae5de06449"
+           target="_blank" rel="noopener">
+             <i18n>In-Depth Analysis After One Year of Rebalancing</i18n></a>
+        </form>
+      </section>
+
+    </section>
+
+
   </main>
+
+
 
 
   <noscript>

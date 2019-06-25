@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.11.0 - 2019-06-25
+
+### Added
+
+- Legal disclaimer.
+
+### Changed
+
+- Rewrite 'Welcome' page.
+- Easier access to the demo account & the related article.
+- Tiny theme tweaks.
+
 ## 0.10.2 - 2019-06-22
 
 ### Changed
