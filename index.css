@@ -335,6 +335,19 @@ template {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+/* Colors Theme */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/SourceSansPro-Regular.ttf"); }
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/RobotoSlab-Regular.ttf"); }
+
 /* Layout */
 html {
   position: relative;
@@ -345,9 +358,9 @@ html {
 
 body {
   height: 100%;
-  background: #f8f8fc;
-  padding: 2.5em 0 4.65em 0;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(#f6f9fd, #eff4fd);
+  padding: 3rem 0 4.65em 0;
+  font-family: "Source Sans Pro", Arial, sans-serif;
   color: #111; }
 
 header {
@@ -355,7 +368,7 @@ header {
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 2.5em; }
+  height: 3rem; }
 
 main, noscript {
   display: block;
@@ -372,12 +385,12 @@ footer {
 /* Generic Tag Styling */
 a {
   text-decoration: none;
-  color: gray;
   font-stretch: condensed;
-  transition: 0.2s all ease; }
-  a:hover, a.selected {
-    text-decoration: underline; }
+  transition: 0.2s all ease;
+  color: #666666; }
   a:hover:not(.selected) {
+    text-decoration: none;
+    color: #7799d5;
     cursor: pointer; }
 
 p {
@@ -391,25 +404,44 @@ nav {
   text-align: right; }
   nav a {
     display: inline-block;
-    margin: 0 0 0 1.62em; }
+    margin: 0.2rem 0 0 1.6em;
+    border-bottom: solid 0.2rem transparent; }
+    nav a.selected {
+      border-bottom-color: #7799d5;
+      color: #7799d5; }
 
 h2 {
   margin: 1.75rem;
-  font-size: 1.25em;
-  font-weight: normal;
-  text-align: center; }
+  font-size: 1.4em;
+  text-align: center;
+  font-family: "Roboto Slab";
+  position: relative;
+  font-weight: bold;
+  vertical-align: bottom; }
+  h2:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 30%;
+    width: 40%;
+    height: 0.4em;
+    background: #edf2fa; }
+
+h3, th {
+  margin: 1.2em;
+  font-size: 1.05em;
+  font-weight: bold; }
 
 h3 {
-  margin: 1.2em;
-  font-size: 1em;
-  font-weight: bold;
   text-align: center; }
 
 hr {
   border: 0;
   height: 1px;
   margin: 1em;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #e6e6e6, rgba(0, 0, 0, 0)); }
+  background-image: linear-gradient(to right, transparent, #e6e6e6, transparent); }
 
 /* Table */
 table {
@@ -418,15 +450,19 @@ table {
   border-collapse: collapse; }
 
 th, td {
-  padding: 0.5em 1em;
-  white-space: nowrap; }
+  padding: 0.5em 0.75em;
+  white-space: nowrap;
+  height: 2.5rem; }
 
 th {
-  height: 2.5em;
-  border-bottom: solid 1px #e3e3e8;
-  border-right: solid 1px #e4e4f4;
-  box-shadow: 0em 0.1em 0.2em #f1f1f9;
-  background: #ededf7; }
+  height: 3rem;
+  font-size: 1.05em;
+  background: #edf2fa;
+  border-bottom: 1px solid #e4ecf8;
+  box-shadow: 2px 0px 1px #edf2fa; }
+  th.name {
+    text-align: left;
+    padding-left: 3em; }
 
 td img {
   height: 1.5em;
@@ -437,9 +473,10 @@ tr:hover {
   cursor: pointer; }
 
 tr:hover, tr.selected {
-  background: #f4f4fa; }
+  background: #f5f8fc;
+  box-shadow: 2px 0px 1px #f5f8fc; }
 
-td .footer {
+tr .footer {
   font-weight: bold; }
 
 /* Form styling */
@@ -489,9 +526,9 @@ textarea,
 select,
 button,
 input {
-  border: solid 0.05em #d5d5dd;
+  border: solid 0.05em #e6e8eb;
   border-radius: 0.1em;
-  background: #f8f8fc; }
+  background: #f8f9fb; }
   textarea [type="number"],
   select [type="number"],
   button [type="number"],
@@ -501,18 +538,18 @@ input {
   select[readonly],
   button[readonly],
   input[readonly] {
-    color: #666666; }
+    color: gray; }
   textarea:enabled:focus,
   select:enabled:focus,
   button:enabled:focus,
   input:enabled:focus {
     outline: 0;
-    box-shadow: 0em 0em 0.2em #8f8fa3; }
+    box-shadow: 0em 0em 0.1em #7799d5; }
   textarea:enabled:hover,
   select:enabled:hover,
   button:enabled:hover,
   input:enabled:hover {
-    border: solid 0.05em #ababba; }
+    border: solid 0.05em #7799d5; }
 
 textarea[readonly]:hover,
 input[readonly]:hover,
@@ -522,12 +559,12 @@ select:hover {
 [type="button"],
 [type="submit"],
 button {
-  background: #f1f1f9; }
+  background: #f1f3f6; }
   [type="button"]:enabled:hover,
   [type="submit"]:enabled:hover,
   button:enabled:hover {
     cursor: pointer;
-    background: #ededf7; }
+    background: #e6e8eb; }
 
 [type="checkbox"],
 [type="radio"] {
@@ -558,11 +595,11 @@ button {
       padding: 0.1em; }
   [type="checkbox"]:checked + label,
   [type="radio"]:checked + label {
-    color: black;
+    color: #111;
     font-style: normal; }
   [type="checkbox"]:disabled:checked + label,
   [type="radio"]:disabled:checked + label {
-    box-shadow: inset 0 0 0.2em #8f8fa3; }
+    box-shadow: inset 0 0 0.1em #cccccc; }
   [type="checkbox"]:enabled:checked + label,
   [type="radio"]:enabled:checked + label {
     background-color: lightgreen; }
@@ -594,41 +631,77 @@ body > header {
   padding: 0 2%;
   vertical-align: top;
   overflow: hidden;
-  line-height: 2.5em; }
+  line-height: 3rem; }
   body > header nav {
-    line-height: inherit; }
+    line-height: inherit;
+    font-size: 1.05em; }
     body > header nav a {
-      color: #b3b3b3; }
-      body > header nav a:not(.selected):hover {
-        text-decoration: none; }
-      body > header nav a:hover, body > header nav a.selected {
-        color: burlywood; }
+      margin-top: 0.3rem;
+      line-height: 2.4rem; }
   body > header select {
     float: right;
     width: auto;
-    height: 2.5em;
+    height: 3rem;
     margin: 0;
+    font-size: 1.05em;
     border: none !important;
     box-shadow: none !important;
     background: white;
-    color: #666666;
+    color: gray;
     text-align-last: right; }
   body > header h1 {
-    display: inline;
-    font-size: 1.25em;
+    display: inline-block;
+    margin: 0.75rem 0;
+    line-height: 1.5rem;
+    font-size: 1.5em;
     font-style: italic;
-    color: #666666; }
+    color: #666666;
+    font-weight: bolder; }
     body > header h1 svg {
-      height: 1.1em;
+      display: inline-block;
+      height: 1em;
       fill: #666666;
-      transform: skewX(-12deg);
-      vertical-align: text-top; }
+      transform: skewX(-12deg); }
 
 /* Main Style */
 body > noscript,
 body > main {
   padding: 0.3em 1%;
   overflow: hidden; }
+  @media screen and (max-width: 46em) {
+    body > noscript section.landing,
+    body > main section.landing {
+      display: block;
+      padding: 0 2em;
+      text-align: justify; }
+      body > noscript section.landing h3,
+      body > main section.landing h3 {
+        text-align: left; } }
+  @media screen and (min-width: 46em) {
+    body > noscript section.landing,
+    body > main section.landing {
+      display: -ms-flexbox;
+      display: flex; }
+      body > noscript section.landing h3,
+      body > main section.landing h3 {
+        width: 10em;
+        text-align: right; } }
+  body > noscript section.landing h3,
+  body > main section.landing h3 {
+    border-bottom: 1px solid #7799d5;
+    padding-bottom: 1.2em;
+    font-size: 1.2em;
+    color: #5177b8;
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
+  body > noscript section.landing div,
+  body > main section.landing div {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    margin: 0.45em; }
+  body > noscript section section a,
+  body > main section section a {
+    color: #5177b8; }
   body > noscript section p,
   body > main section p {
     padding: 0 1em; }
@@ -638,9 +711,9 @@ body > main {
   body > main section section {
     width: 100%;
     margin: 2rem 0;
-    box-shadow: 0.1em 0.1em 0.2em #e6e6e6;
     border-radius: 0.1em;
-    background: #fdfdfe;
+    box-shadow: 0.1em 0.1em 0.2em #e6e6e6;
+    background: #fefefe;
     overflow-x: auto;
     overflow-y: hidden; }
 
@@ -661,7 +734,7 @@ body > footer {
       fill: #cccccc;
       transition: fill 0.2s ease; }
     body > footer .Icon:hover svg {
-      fill: #666666; }
+      fill: #7799d5; }
   body > footer p {
     line-height: 2em;
     margin: 0;
@@ -676,7 +749,7 @@ body > footer {
   max-width: 95%;
   box-shadow: 0.1em 0.1em 0.2em grey;
   border-radius: 0.1em;
-  background: white;
+  background: #fefefe;
   overflow-x: hidden;
   overflow-y: auto; }
 
@@ -727,7 +800,7 @@ body > footer {
 .note {
   width: 90%;
   margin: 1em auto;
-  color: gray;
+  color: #666666;
   font-style: italic; }
 
 /* Spinner */
@@ -737,10 +810,10 @@ body > footer {
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin: 0 0.1em;
+  margin: 0 0.5em;
   vertical-align: middle;
   border-radius: 100%;
-  background-color: grey;
+  background-color: #666666;
   animation: animate 1.0s infinite ease-in-out; }
 
 @keyframes animate {

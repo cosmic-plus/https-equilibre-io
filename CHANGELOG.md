@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.11.1 - 2019-06-28
+
+### Changed
+
+- Complete interface re-design. (Thanks Alris)
+- Make demo easier to stop.
+
 ## 0.11.0 - 2019-06-25
 
 ### Added
