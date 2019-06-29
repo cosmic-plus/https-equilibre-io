@@ -361,6 +361,9 @@ body {
   background: linear-gradient(#f6f9fd, #eff4fd);
   padding: 3rem 0 4.65em 0;
   font-family: "Source Sans Pro", Arial, sans-serif;
+  -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
   color: #111; }
 
 header {
