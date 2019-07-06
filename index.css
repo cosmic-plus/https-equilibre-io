@@ -319,11 +319,11 @@ template {
 
 @media (min-width: 118em), screen and (min-height: 85em) {
   html {
-    font-size: 1.7em; } }
+    font-size: 1.5em; } }
 
 @media (min-width: 158em) {
   html {
-    font-size: 2.4em; } }
+    font-size: 1.8em; } }
 
 /* Universal rules */
 [hidden] {
@@ -620,7 +620,7 @@ form > fieldset > :not(legend) {
 form .half,
 form .half label {
   width: 38%;
-  min-width: 9em; }
+  min-width: 8em; }
 
 form .third,
 form .third label {
