@@ -2,13 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.1 - 2019-07-11
+
+### Fixed
+
+- Fix a bug that sometime caused rebalancing transactions to be invalid. (Thanks
+  m4dpr0ph3ss0r)
+
 ## 1.0.0 - 2019-07-06
 
 ### Added
 
 - Deal with cases where there's not enough XLM to rebalance the portfolio in one
   step.
-- Lock a mimimum XLM balance to pay for network reserve & offers.
+- Lock a minimum XLM balance to pay for network reserve & offers.
 
 ### Changed
 
@@ -21,7 +28,7 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 
 - Fixed a bug that could lock the app on very low width display.
-- Lower font size on wider screens. (Thanks [@Pselden] & Damian)
+- Reduce font size on wider screens. (Thanks [@Pselden] & Damian)
 - Fix a case in which allocation check limits were bypassed.
 
 ## 0.11.2 - 2019-06-28
