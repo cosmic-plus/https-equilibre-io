@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2 - 2019-07-22
+
+### Changed
+
+- Improve mobile display.
+- Throw an error when a too low XLM allocation would cause rebalancing to take
+  more than 20 steps.
+- Remove thewwallet.com WSD from anchors choice because it has not enough volume
+  anymore.
+
+### Fixed
+
+- Ensure that outdated offers are replaced before new one are passed. This fixes
+  cases in which outdated offers prevented to pass new ones due to liability
+  threshold.
+- Fix a case in which clicking "Cancel" in the target setup dialog would not
+  reset target setting to the previous state.
+- Fix several miscalculations related to balancing assets with multiple anchors
+  & liquidation. In some cases, those mistakes were preventing trades to be
+  passed, or were causing trades to be passed with lower amount than expected.
+  (Thanks m4dpr0ph3ss0r)
+
 ## 1.0.1 - 2019-07-11
 
 ### Fixed

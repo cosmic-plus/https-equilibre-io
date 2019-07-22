@@ -305,6 +305,9 @@ template {
   display: none; }
 
 /* Screen-size handling */
+@-ms-viewport {
+  width: device-width; }
+
 @media screen and (min-width: 46em), screen and (min-height: 36.5em) {
   html {
     font-size: 1.1em; } }
@@ -361,9 +364,6 @@ body {
   background: linear-gradient(#f6f9fd, #eff4fd);
   padding: 3rem 0 4.65em 0;
   font-family: "Source Sans Pro", Arial, sans-serif;
-  -webkit-text-size-adjust: none;
-      -ms-text-size-adjust: none;
-          text-size-adjust: none;
   color: #111; }
 
 header {
@@ -376,8 +376,9 @@ header {
 main, noscript {
   display: block;
   width: 50em;
-  max-width: 100%;
-  margin: auto; }
+  max-width: 96%;
+  margin: auto;
+  max-height: 100%; }
 
 footer {
   position: absolute;
@@ -636,8 +637,12 @@ body > header {
   overflow: hidden;
   line-height: 3rem; }
   body > header nav {
+    display: none;
     line-height: inherit;
     font-size: 1.05em; }
+    @media screen and (min-width: 46em) {
+      body > header nav {
+        display: unset; } }
     body > header nav a {
       margin-top: 0.3rem;
       line-height: 2.4rem; }
@@ -652,6 +657,9 @@ body > header {
     background: white;
     color: gray;
     text-align-last: right; }
+    @media screen and (min-width: 46em) {
+      body > header select {
+        display: none; } }
   body > header h1 {
     display: inline-block;
     margin: 0.75rem 0;
