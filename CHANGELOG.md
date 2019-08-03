@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.4 - 2019-08-03
+
+### Changed
+
+- Remove REPO from default assets list as it doesn't match listing requirements
+  anymore (low spread, decent daily volumes).
+
+### Fixed
+
+- Lock rebalancing transaction request to public network.
+
 ## 1.0.3 - 2019-07-23
 
 ### Fixed
