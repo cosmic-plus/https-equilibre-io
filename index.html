@@ -4,6 +4,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="
+    form-action 'none';
+    default-src 'none';
+    script-src 'self';
+    style-src 'self';
+    font-src 'self';
+    manifest-src 'self';
+    frame-src 'self'
+      https://api.cosmic.link
+      https://cosmic.link
+      https://stellar-authenticator.org
+    ;
+    img-src 'self' data:
+      https://assets.coingecko.com
+      https://www.xe.com
+    ;
+    connect-src 'self'
+      https://api.coingecko.com
+      https://api.exchangeratesapi.io
+      https://horizon.stellar.org
+    ;
+  ">
 
   <title>Equilibre.io ~ Balance your Stellar portfolio</title>
   <meta property="og:title"
