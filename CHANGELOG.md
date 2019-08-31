@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.1.1 - 2019-08-01
+
+### Fixed
+
+- UI: Fix a style regression from 1.1.0. Highcharts needs to use inline style.
+
 ## 1.1.0 - 2019-08-31
 
 ### Added
