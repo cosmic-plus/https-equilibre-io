@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.2.1 - 2019-09-09
+
+### Fixed
+
+- Logic: Fix federated address resolution. This have been broken by 1.1.0. -
+  Thanks [@m4dpr0ph3ss0r](https://keybase.io/m4dpr0ph3ss0r)
+
 ## 1.2.0 - 2019-09-07
 
 ### Changed
