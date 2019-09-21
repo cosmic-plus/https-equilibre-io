@@ -304,7 +304,7 @@ template {
 [hidden] {
   display: none; }
 
-/* Screen-size handling */
+/* Screen-size Handling */
 @-ms-viewport {
   width: device-width; }
 
@@ -332,6 +332,12 @@ template {
 [hidden] {
   display: none !important; }
 
+html {
+  box-sizing: border-box;
+  vertical-align: middle; }
+  html * {
+    max-height: 100%; }
+
 *, *:before, *:after {
   box-sizing: inherit;
   vertical-align: inherit;
@@ -354,10 +360,8 @@ template {
 /* Layout */
 html {
   position: relative;
-  box-sizing: border-box;
   min-height: 100%;
-  overflow-y: scroll;
-  vertical-align: middle; }
+  overflow-y: scroll; }
 
 body {
   height: 100%;
@@ -744,6 +748,8 @@ body > footer {
       max-width: 9vw;
       fill: #cccccc;
       transition: fill 0.2s ease; }
+    body > footer .Icon[href="https://cosmic.plus"] svg {
+      fill: #607492; }
     body > footer .Icon:hover svg {
       fill: #7799d5; }
   body > footer p {
