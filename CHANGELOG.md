@@ -14,6 +14,12 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.3.1 - 2019-09-28
+
+### Fixed
+
+- Translation: Fix french translation.
+
 ## 1.3.0 - 2019-09-21
 
 ### Changed
