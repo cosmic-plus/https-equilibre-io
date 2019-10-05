@@ -820,6 +820,14 @@ body > footer {
   color: #666666;
   font-style: italic; }
 
+.hardwareWallets button {
+  height: 3em;
+  width: 38%;
+  max-width: 17.4em; }
+  .hardwareWallets button svg {
+    height: 1.5em;
+    fill: #111; }
+
 /* Spinner */
 .cosmiclib_loadingAnim,
 .cosmiclib_loader,
