@@ -14,6 +14,17 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.4.1 - 2019-11-09
+
+### Fixed
+
+- Configuration: Remove PEDI from listed asset. The PEDI/XLM pair doesn't comply
+  with Equilibre.io requirements anymore. (volume is too low, spread is at 60%)
+
+- UI: Fix spread percentage formula.
+  - spread  = ask - bid
+  - spread% = 100 * spread / ask
+
 ## 1.4.0 - 2019-10-05
 
 ### Added
