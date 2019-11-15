@@ -14,6 +14,13 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.4.2 - 2019-11-15
+
+### Fixed
+
+- Logic: Fix liquidation of one-of-several anchor. For assets having multiple
+  anchors, liquidation of only one of the anchors was failing on the last dust.
+
 ## 1.4.1 - 2019-11-09
 
 ### Fixed
