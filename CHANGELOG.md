@@ -14,6 +14,14 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.4.3 - 2019-11-23
+
+### Fixed
+
+- Data: Remove `x.token.io` from listed USD anchors. While the token can still
+  be traded at the expected price, the order book became thin lately, and it
+  looks like <x.token.io> is not caring its anchor anymore.
+
 ## 1.4.2 - 2019-11-15
 
 ### Fixed

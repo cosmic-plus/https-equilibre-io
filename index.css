@@ -335,8 +335,9 @@ template {
 html {
   box-sizing: border-box;
   vertical-align: middle; }
-  html * {
-    max-height: 100%; }
+
+body > * {
+  max-height: 100%; }
 
 *, *:before, *:after {
   box-sizing: inherit;
