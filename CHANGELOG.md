@@ -14,6 +14,16 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.5.0 - 2019-11-30
+
+### Changed
+
+- Meta: Preload script & style.
+
+### Fixed
+
+- UI: Get rid of font loading delay.
+
 ## 1.4.3 - 2019-11-23
 
 ### Fixed
