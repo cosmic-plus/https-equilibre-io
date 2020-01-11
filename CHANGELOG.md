@@ -14,6 +14,27 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.6.0 - 2020-01-11
+
+### Added
+
+- Logic: Add dust burning. Until now, Equilibre.io was failing to close some
+  trustlines because dust worth under 0.0000001XLM cannot be sold on the DEX.
+  This dust is now sent back to the emitter to bring the balance to 0 before
+  closing the trustline.
+
+### Changed
+
+- Logic: Upgrade @cosmic-plus/ledger-wallet to 2.x.
+- UI: Remove `FRAS` from listed assets. The FRAS/XLM pair is not liquid enough
+  anymore.
+- UI: Update demo account configuration.
+
+### Fixed
+
+- Logic: Close offers before trustlines. Prevent errors when trying to remove an
+  asset with a balance of 0 that has open offers.
+
 ## 1.5.1 - 2019-11-30
 
 ### Fixed
@@ -53,8 +74,8 @@ releases, please check this changelog before upgrading.
   with Equilibre.io requirements anymore. (volume is too low, spread is at 60%)
 
 - UI: Fix spread percentage formula.
-  - spread  = ask - bid
-  - spread% = 100 * spread / ask
+  - spread = ask - bid
+  - spread% = 100 \* spread / ask
 
 ## 1.4.0 - 2019-10-05
 
