@@ -14,6 +14,20 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.7.0 - 2020-01-25
+
+### Added
+
+- Data: Add market data for GNT (glitzkoin.com) & WLO (pigzbe.com). Equilibre.io
+  won't offer to add those coins as their orderbooks are not strong enough, but
+  users holding those coins can access market data & rebalancing options.
+
+### Changed
+
+- Data: Re-add asset EURT (tempo.eu.com). Tempo solved its liquidity issues &
+  the orderbook is stable since more than a month.
+- Data: List asset WXT (wirexapp.com).
+
 ## 1.6.0 - 2020-01-11
 
 ### Added
