@@ -14,6 +14,13 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.8.1 - 2020-04-19
+
+### Fixed
+
+- Logic: Fix transaction request generation. (regression from 1.8.0)
+- UI: Fix a bug that prevented portfolio historic to display.
+
 ## 1.8.0 - 2020-04-18
 
 ### Changed
