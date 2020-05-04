@@ -14,6 +14,12 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.9.1 - 2020-05-04
+
+### Fixed
+
+- Logic: Fix apay.io USDT support. (now considered as an USD anchor)
+
 ## 1.9.0 - 2020-05-02
 
 ### Added
