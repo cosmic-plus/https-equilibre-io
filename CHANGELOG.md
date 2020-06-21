@@ -14,6 +14,22 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.10.0 - 2020-06-21
+
+### Added
+
+- UI: Add images in the welcoming page.
+
+### Changed
+
+- UI: Change donation address.
+- UI: Upgrade graphic style.
+
+### Fixed
+
+- Security: Upgrade deprecated depend. (Highcharts => 8.x)
+- UI: Fix french translation.
+
 ## 1.9.1 - 2020-05-04
 
 ### Fixed

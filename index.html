@@ -69,17 +69,18 @@
 
 
   <main>
-    <div id="loading" hidden>
+    <section id="loading" hidden>
       <h3><i18n>Loading</i18n><span class="spinner"></span></h3>
-    </div>
+    </section>
 
     <section id="loginTab" hidden>
       <h2><i18n>Login</i18n></h2>
 
       <section>
 
+        <h3><i18n>Enter with your Stellar address:</i18n></h3>
         <form id="loginForm" autocomplete="on">
-          <h3><i18n>Enter with your Stellar address:</i18n></h3>
+          <span class="info"></span>
           <input id="loginAddressBox" type="text" name="stellar-public-key"
             placeholder="Public key or federated address">
           <button type="submit"><i18n>Login</i18n></button>
@@ -98,8 +99,8 @@
       </section>
 
       <section>
+        <h3><i18n>Feeling Curious ?</i18n></h3>
         <form>
-        <p><i18n>Feeling Curious ?</i18n><p>
         <p><a id="demoLink"><i18n>Check My Demo Account</i18n></a></p>
         <p><a
            href="https://medium.com/cosmic-plus/equilibre-io-in-depth-analysis-after-one-year-of-rebalancing-bdae5de06449"
