@@ -308,23 +308,22 @@ template {
 @-ms-viewport {
   width: device-width; }
 
-@media screen and (min-width: 800px), screen and (min-height: 600px) {
-  html {
-    font-size: 1.1em; } }
+html {
+  font-size: 1.1em; }
 
-@media screen and (min-width: 1024px), screen and (min-height: 768px) {
+@media screen and (min-width: 64em), screen and (min-height: 64em) {
   html {
     font-size: 1.2em; } }
 
-@media screen and (min-width: 1366px), screen and (min-height: 1024px) {
+@media screen and (min-width: 85.375em), screen and (min-height: 85.375em) {
   html {
     font-size: 1.3em; } }
 
-@media screen and (min-width: 1920px), screen and (min-height: 1366px) {
+@media screen and (min-width: 120em) {
   html {
     font-size: 1.5em; } }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 160em) {
   html {
     font-size: 1.8em; } }
 
@@ -493,7 +492,20 @@ tr .footer {
   font-weight: bold; }
 
 /* Form styling */
-/* Blocks */
+form > label > :not(span),
+form > fieldset > :not(legend) {
+  width: 76%; }
+
+form .half,
+form .half label {
+  width: 38%;
+  min-width: 8em; }
+
+form .third,
+form .third label {
+  width: 25%;
+  min-width: 6em; }
+
 form {
   margin: 1em 0;
   padding: 0 1em;
@@ -519,19 +531,21 @@ form > label {
     text-align: left;
     white-space: nowrap; }
 
-/* Elements */
 textarea,
 select,
 button,
 input,
 [type="checkbox"] + label,
 [type="radio"] + label {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   display: inline-block;
   width: 100%;
   height: 1.8em;
   max-width: 35em;
   margin: 0.2em 0;
-  padding: 0 0.2em;
+  padding: 0 0.4em;
   overflow: hidden;
   transition: all 0.2s ease; }
 
@@ -539,9 +553,9 @@ textarea,
 select,
 button,
 input {
-  border: solid 0.05em darkgray;
+  border: solid thin darkgray;
   border-radius: 0.1em;
-  background: #f4f4f4; }
+  background-color: #f4f4f4; }
   textarea [type="number"],
   select [type="number"],
   button [type="number"],
@@ -561,8 +575,8 @@ input {
   input:enabled:hover {
     outline: 0;
     box-shadow: 0em 0em 0.1em #003f90;
-    background: #daeeff;
-    border: solid 0.05em #409dff; }
+    background-color: #daeeff;
+    border: solid thin #409dff; }
 
 textarea[readonly]:hover,
 input[readonly]:hover,
@@ -580,6 +594,12 @@ button {
   button:enabled:focus {
     cursor: pointer;
     background: #98cdff; }
+
+select {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 50" fill="%23292929"><polygon points="0,0 60,0 30,50"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 1em; }
 
 [type="checkbox"],
 [type="radio"] {
@@ -624,21 +644,6 @@ button {
     color: black;
     cursor: pointer; }
 
-/* Sizing */
-form > label > :not(span),
-form > fieldset > :not(legend) {
-  width: 76%; }
-
-form .half,
-form .half label {
-  width: 38%;
-  min-width: 8em; }
-
-form .third,
-form .third label {
-  width: 25%;
-  min-width: 6em; }
-
 /* Header Style */
 body > header {
   z-index: 200;
@@ -663,12 +668,12 @@ body > header {
     width: auto;
     height: 3rem;
     margin: 0;
+    border: solid thin transparent;
+    background-color: white;
+    padding: 0 1.4em 0 0.6em;
     font-size: 1.05em;
-    border: none !important;
-    box-shadow: none !important;
-    background: white;
     color: #545454;
-    text-align-last: right; }
+    text-align-last: center; }
     @media screen and (min-width: 46em) {
       body > header select {
         display: none; } }

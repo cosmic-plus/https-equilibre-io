@@ -14,6 +14,21 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.11.0 - 2020-07-05
+
+### Changed
+
+- Meta: Upgrade icons & PWA colors.
+- Style: Upgrade charts colors.
+- Style: Polish small-screen tab selector.
+- Style: Polish selectors style.
+- Style: Normalize form elements style across OS.
+- Style: More form elements polishing.
+
+### Fixed
+
+- UI: Fix iOs 13 rebalancing side-frame bug.
+
 ## 1.10.0 - 2020-06-21
 
 ### Added
