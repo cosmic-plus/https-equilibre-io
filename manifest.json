@@ -1,7 +1,7 @@
 {
   "name": "Equilibre.io",
   "short_name": "Equilibre.io",
-  "theme_color": "#98cdff",
+  "theme_color": "#001738",
   "background_color": "#daeeff",
   "display": "standalone",
   "start_url": "/",
