@@ -14,6 +14,13 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.13.1 - 2020-09-12
+
+### Fixed
+
+- UI: Fix portfolio history graph. A change in Coingecko caused it to not
+  compute anymore.
+
 ## 1.13.0 - 2020-07-25
 
 ### Changed
