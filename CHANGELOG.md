@@ -14,6 +14,16 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.15.1 - 2021-04-03
+
+### Changed
+
+- Data: Set naobtc & fchain anchors as unpeg.
+
+### Fixed
+
+- Logic: Fix an API change that broke the app. (Thanks alioli)
+
 ## 1.15.0 - 2021-01-11
 
 ### Changed
