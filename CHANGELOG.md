@@ -14,6 +14,17 @@ Versioning](https://semver.org/spec/v2.0.0.html)**. Version syntax is
 backward-compatibility and can be updated to without risk of breakage. For major
 releases, please check this changelog before upgrading.
 
+## 1.17.0 - 2021-09-17
+
+### Added
+
+- UI: List CityStates Medieval (CSM).
+- UI: List USD Coin (USDC).
+
+### Changed
+
+- UI: Remove support for FRAS & WLO.
+
 ## 1.16.0 - 2021-04-03
 
 ### Changed
